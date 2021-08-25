@@ -1,14 +1,13 @@
-import { enableMapSet, produce } from "immer";
+import { produce } from "immer";
 import createReducer from "./reducerUtils";
-enableMapSet();
 
 const initalStaste = {
-  peoples: new Map(),
+  peoples: [],
 };
 
 const peoplesFunctions = {
   addPeople(state, action) {
-    state.peoples.set(action.payload.key, action.payload.value);
+    state.peoples[action.payload.key] = action.payload.value;
   },
 };
 

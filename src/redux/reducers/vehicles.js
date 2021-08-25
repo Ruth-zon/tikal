@@ -13,6 +13,9 @@ const vehiclesFunctions = {
   setMax(state, action) {
     state.max = action.payload;
   },
+  setMaxFinished(state, action){
+    state.max.finished=action.payload;
+  }
 };
 
 export default produce(
