@@ -15,8 +15,10 @@ const planetsFunctions = {
     state.planetsDataToChart = state.planetsDataToChart.concat(action.payload);
   },
   foundPlanetToCart(state, action) {
-    state.planetsNamesToChart = state.planetsNamesToChart.filter(planet => planet !== action.payload);
-  }
+    state.planetsNamesToChart = state.planetsNamesToChart.filter(
+      (planet) => planet !== action.payload
+    );
+  },
 };
 
 export default produce(
