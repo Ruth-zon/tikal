@@ -1,5 +1,11 @@
 import { actions } from "../actions";
 
+//algorithm for max vehicle:
+// loop for every list of vehicles from server:
+// 1. find all pilots of every vehicle
+// 2. find the planet of every pilot
+// 3. sum the planets residents- for all pilots in every vehicle
+// 4. make sure not calculate one planet twice.
 export const getMaxVehicle =
   ({ dispatch, getState }) =>
   (next) =>
